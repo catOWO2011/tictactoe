@@ -1,14 +1,14 @@
 import { Component } from "react";
 
 import { Board } from "../board/board.component";
+import { Player } from "../player/player.component";
 
-const X_MARK = 'x';
-const O_MARK = 'o';
+import './game.styles.css';
 
 export class Game extends Component {
   state = {
     board: Array(9).fill(null),
-    prevPlayerName: ''
+    players: []
   }
 
   handleClickOnCell = ({target}) => {
@@ -23,11 +23,34 @@ export class Game extends Component {
   render() {
     return (
       <div>
-        Game Component
-        <Board
-          board={this.state.board}
-          handleClickOnCell={this.handleClickOnCell}
-        />
+        <div
+          className="ttt-player-list-container"
+        >
+          <ul className="ttt-player-list">
+            <li>
+              
+            </li>
+            <li>
+              
+            </li>
+          </ul>
+        </div>
+        <div
+          className="ttt-game-board"
+        >
+          <Player
+            name="Bob"
+            imagePath={'https://robohash.org/3?set=set4'}
+          />
+          <Board
+            board={this.state.board}
+            handleClickOnCell={this.handleClickOnCell}
+          />
+          <Player
+            name="Alice"
+            imagePath={'https://robohash.org/2?set=set4'}
+          />
+        </div>
       </div>
     );
   }
