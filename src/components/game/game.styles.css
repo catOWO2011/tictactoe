@@ -1,11 +1,12 @@
-.ttt-game-board {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
 .ttt-player-list {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-column-gap: 20px;
-  list-style-type: none;
+  /* auto-fill is amazing takes in hand move the other items below in case
+  there's no available space */
+  grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+  grid-gap: 20px;
+  list-style: none;
+}
+
+.ttt-player-list-container h2 {
+  font-size: 35px;
 }
