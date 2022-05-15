@@ -2,19 +2,27 @@ import React from 'react';
 
 import './player.styles.css';
 
-export const Player = ({name, imagePath}) => (
-  <div>
+export const Player = ({ id, name, handleClickOnPlayer, classNames }) => (
+  <div
+    className={`ttt-player-container ${classNames}`}
+    id={id}
+    onClick={ handleClickOnPlayer }
+  >
     <div
+      id={id}
       className='ttt-picture'
     >
       <img
+        id={id}
         className='ttt-player'
-        src={imagePath}
+        src={`https://robohash.org/${id}?set=set4`}
         alt='player_image'
       />
     </div>
-    <div>
-      <h3>{ name }</h3>
+    <div
+      id={id}
+    >
+      <h3 id={id}>{ name }</h3>
     </div>
   </div>
 );

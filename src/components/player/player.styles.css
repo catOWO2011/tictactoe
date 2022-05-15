@@ -10,6 +10,25 @@
   display: inline-block;
   height: 130px;
   width: 130px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
+  margin-top: 20px;
   position: relative;
+  z-index: 0;
+}
+
+.ttt-player-container {
+  background: rgb(251,244,63);
+  background: radial-gradient(circle, rgba(251,244,63,1) 1%, rgba(247,92,92,1) 100%);
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.ttt-player-container.read-only {
+  cursor: default;
+  background: #aa99ee;
+}
+
+.ttt-player-container:hover {
+  box-shadow: 0 0 0 14px #faa268;
+  transform: scale(1.1);
 }
