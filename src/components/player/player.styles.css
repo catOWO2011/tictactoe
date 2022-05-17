@@ -28,7 +28,12 @@
   background: #aa99ee;
 }
 
-.ttt-player-container:hover {
+.ttt-player-container.active-option:hover {
   box-shadow: 0 0 0 14px #faa268;
   transform: scale(1.1);
+}
+
+.ttt-player-timer {
+  width: 30%;
+  border-radius: 50px;
 }

@@ -59,6 +59,7 @@ export const PlayerList = ({ players, handleClickOnPlayer, firstPlayer, secondPl
           key={player.id}
           name={player.name}
           handleClickOnPlayer={handleClickOnPlayer}
+          classNames='active-option'
         />)
       }
     </ul>
